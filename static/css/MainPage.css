@@ -1,0 +1,68 @@
+body {
+  background: linear-gradient(to right, indigo, violet, indigo);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background: linear-gradient(to right, #330033, #330033);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-fill-color: transparent;
+  font-size: 6vw; /* Zmiana rozmiaru tekstu na podstawie szerokości ekranu */
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin: 10vh 0; /* Margines górny i dolny dla elementu h1 */
+  animation: fadeInText 1s ease-in-out forwards; /* Dodanie animacji pojawiania się tekstu */
+}
+
+/* Reguła dla urządzeń o szerokości ekranu mniejszej niż 768px */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 8vw; /* Dostosowanie rozmiaru tekstu dla mniejszych ekranów */
+    margin: 5vh 0; /* Dostosowanie marginesu górnego i dolnego dla mniejszych ekranów */
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  background-color: #330033;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Ustawienie pozycji absolutnej */
+  top: 80%; /* Przesunięcie do 50% od góry */
+  left: 50%; /* Przesunięcie do 50% od lewej */
+  transform: translate(-50%, -50%); /* Wycentrowanie elementu */
+  overflow: hidden;
+  opacity: 0; /* Ustawienie początkowej przezroczystości na 0 */
+  animation: fadeIn 1s ease-in-out forwards; /* Dodanie animacji pojawiania się koła */
+  cursor: pointer;
+}
+
+.circle h2 {
+  color: white;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards; /* Dodanie animacji pojawiania się tekstu */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

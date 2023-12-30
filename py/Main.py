@@ -1,11 +1,10 @@
-from flask import Flask,render_template
+from flask import Flask, render_template
 
-app=Flask(__name__,template_folder='../html',static_folder='../css')
-
+app = Flask(__name__, template_folder='../html', static_folder='../static')
 
 @app.route("/home")
 def home():
     return render_template('MainPage.html')
 
-if __name__=="__main__":
+if __name__ == "__main__":
     app.run(debug=True)
