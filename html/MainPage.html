@@ -6,12 +6,16 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/MainPage.css') }}">
 </head>
 <body>
-    <h1>NOTELAND</h1>
+    <a href="http://127.0.0.1:5000/home">
+        <h1>NOTELAND</h1>
+    </a>
 </br></br>
     <div class = "circle" id="circle">
         <h2>Start</h2>
     </div>
-<script src="{{ url_for('static', filename='js/button-start.js') }}"></script>
+    <div class = "circle2" id="circle2"></div>
+    <div class = "circle3" id="circle3"></div>
+<script src="{{ url_for('static', filename='js/buttons.js') }}"></script>
 
 </body>
 </html>

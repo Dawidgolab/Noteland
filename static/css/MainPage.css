@@ -4,12 +4,18 @@ body {
   padding: 0;
 }
 
+/*Url*/
+a {
+  text-decoration: none; /* Remove underline */
+  /* Optionally, you can add more styles if needed */
+  color: inherit; /* Preserve the default link color */
+}
+
+
 h1 {
-  background: linear-gradient(to right, #330033, #330033);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #330033;
   text-fill-color: transparent;
-  font-size: 6vw; /* Zmiana rozmiaru tekstu na podstawie szerokości ekranu */
+  font-size: 8vw; /* Zmiana rozmiaru tekstu na podstawie szerokości ekranu */
   text-align: center;
   font-family: 'Roboto', sans-serif;
   margin: 10vh 0; /* Margines górny i dolny dla elementu h1 */
@@ -42,7 +48,7 @@ h1 {
   justify-content: center;
   align-items: center;
   position: absolute; /* Ustawienie pozycji absolutnej */
-  top: 80%; /* Przesunięcie do 50% od góry */
+  top: 60%; /* Przesunięcie do 50% od góry */
   left: 50%; /* Przesunięcie do 50% od lewej */
   transform: translate(-50%, -50%); /* Wycentrowanie elementu */
   overflow: hidden;
@@ -66,3 +72,32 @@ h1 {
     opacity: 1;
   }
 }
+.circle2,
+.circle3 {
+  width: 300px; /* Adjust the width and height as needed */
+  height: 300px;
+  background-color: #330033;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 80%; /* Adjust the positioning as needed */
+  left: 40%; /* Adjust the left position for circle3 */
+  transform: translateX(-50%);
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  cursor: pointer;
+}
+
+.circle2 h2,
+.circle3 h2 {
+  color: white;
+  margin: 0;
+  opacity: 1;
+  text-align: center; /* Center the text horizontally */
+  line-height: 300px; /* Center the text vertically (assuming circle height is 300px) */
+}
+
+
