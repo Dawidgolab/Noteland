@@ -40,8 +40,8 @@ h1 {
 }
 
 .circle {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   background-color: #330033;
   border-radius: 50%;
   display: flex;
@@ -82,8 +82,8 @@ h1 {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 80%; /* Adjust the positioning as needed */
-  left: 40%; /* Adjust the left position for circle3 */
+  top: 50%;
+  left: 50%; /* Adjust the left position for circle3 */
   transform: translateX(-50%);
   overflow: hidden;
   opacity: 0;

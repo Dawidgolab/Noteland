@@ -6,16 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     circle.style.display = 'none'; // Hide circle1
 
-    var circle2 = document.createElement('div');
+
     circle2.classList.add('circle2');
-    circle2.innerHTML = '<h2>Current main list</h2>'; // Update text content for circle2
-    circle2.style.top = circleTop + 'px'; // Set the top position of circle2
     circle2.style.display = 'block'; // Make circle2 visible
 
-    var circle3 = document.createElement('div');
     circle3.classList.add('circle3');
-    circle3.innerHTML = '<h2>Add new notes</h2>'; // Update text content for circle3
-    circle3.style.top = circleTop + 'px'; // Set the top position of circle3
     circle3.style.display = 'block'; // Make circle3 visible
 
     document.body.appendChild(circle2);
