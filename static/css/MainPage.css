@@ -118,4 +118,14 @@ h1 {
     height: 100%; /* Wysokość formularza jest równa wysokości .notes-container */
     width: 100%; /* Szerokość formularza jest równa szerokości .notes-container */
 }
+.notes-form textarea,
+.notes-form input{
+    background: linear-gradient(to right, indigo, grey);
+    color: white;
+}
+
+.notes-form textarea::placeholder,
+.notes-form input::placeholder{
+    color: #9595b7; /* Nowy kolor placeholdera */
+}
 
