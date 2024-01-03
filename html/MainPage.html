@@ -11,16 +11,27 @@
         <h1>NOTELAND</h1>
     </a>
 
+    <!-- main circle-->
     <div class = "circle" id="circle">
         <h2>Start</h2>
     </div>
 
+    <!-- circles after click main circle-->
     <div class = "circle2" id="circle2">
         <h2>Current main list</h2>
     </div>
 
     <div class = "circle3" id="circle3">
         <h2>Add new notes</h2>
+    </div>
+
+    <!-- add new notes-->
+    <div class="notes-container" id="notes-container">
+        <div class="notes-form" id="notes-form">
+            <input type="text" id="note-title" placeholder="Note title"><br>
+            <textarea id="note-content" placeholder="Your note here..." style="height:163px; width: 963px;"></textarea><br>
+            <button id="save-note">Save Note</button>
+        </div>
     </div>
 
 <script src="{{ url_for('static', filename='js/buttons.js') }}"></script>

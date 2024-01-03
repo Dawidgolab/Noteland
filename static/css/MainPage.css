@@ -100,4 +100,22 @@ h1 {
   line-height: 300px; /* Center the text vertically (assuming circle height is 300px) */
 }
 
+.notes-container {
+    position: absolute;
+    height: 200px; /* Możesz zmienić wysokość na żądaną wartość */
+    width: 80%; /* Możesz zmienić szerokość na żądaną wartość */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.notes-form {
+    background-color: #330033;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Wysokość formularza jest równa wysokości .notes-container */
+    width: 100%; /* Szerokość formularza jest równa szerokości .notes-container */
+}
 
