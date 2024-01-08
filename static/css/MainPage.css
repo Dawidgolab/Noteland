@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to right, indigo, violet, indigo);
+  background: linear-gradient(to right, violet, grey, violet, grey,violet);
   margin: 0;
   padding: 0;
 }
@@ -13,13 +13,12 @@ a {
 
 
 h1 {
-  color: #330033;
-  text-fill-color: transparent;
-  font-size: 8vw; /* Zmiana rozmiaru tekstu na podstawie szerokości ekranu */
+  background: linear-gradient(to right, violet,grey, violet, grey,violet);
+  font-size: 8vw; /* Resize text based on screen width */
   text-align: center;
-  font-family: 'Roboto', sans-serif;
-  margin: 10vh 0; /* Margines górny i dolny dla elementu h1 */
-  animation: fadeInText 1s ease-in-out forwards; /* Dodanie animacji pojawiania się tekstu */
+  font-family: 'Pacifico', cursive;
+  margin: 5vh 0; /* Top and bottom margins for the h1 element */
+  animation: fadeInText 1s ease-in-out forwards; /* Adding text appearance animation */
 }
 
 /* Reguła dla urządzeń o szerokości ekranu mniejszej niż 768px */
@@ -102,12 +101,13 @@ h1 {
 
 .notes-container {
     position: absolute;
-    height: 200px; /* Możesz zmienić wysokość na żądaną wartość */
+    height: 300px; /* Możesz zmienić wysokość na żądaną wartość */
     width: 80%; /* Możesz zmienić szerokość na żądaną wartość */
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .notes-form {
@@ -128,4 +128,26 @@ h1 {
 .notes-form input::placeholder{
     color: #9595b7; /* Nowy kolor placeholdera */
 }
+
+/*CIRCLE BUTTOM*/
+.circle-save {
+  width: 200px;
+  height: 200px;
+  background-color: #330033;
+  border-radius: 50%;
+  position: absolute; /* Ustawienie pozycji absolutnej */
+  bottom: -150%; /* Przesunięcie do % od góry */
+  left: 50%; /* Przesunięcie do 50% od lewej */
+  transform: translate(-50%, -50%); /* Wycentrowanie elementu */
+  animation: fadeIn 1s ease-in-out forwards; /* Dodanie animacji pojawiania się koła */
+  cursor: pointer;
+
+}
+.circle-save h2{
+  color:white;
+  text-align: center;
+  margin: 0;
+  line-height: 200px; /* Dopasowanie do wysokości dla wyśrodkowania tekstu */
+}
+
 

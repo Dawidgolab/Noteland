@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var circle2 = document.querySelector('.circle2');
   var circle3 = document.querySelector('.circle3');
   var notesContainer = document.querySelector('.notes-container');
+  var circleSave = document.querySelector('.circle-save');
 
   circle.addEventListener('click', function() {
     circle.style.display = 'none'; // Hide circle1
@@ -18,12 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
     circle2.style.display = 'none'; // Hide circle2
     circle3.style.display = 'none'; // Hide circle3
     notesContainer.style.display = 'block'; // Show notes form
+    circleSave.style.display = 'block';
   });
 
   // Initially hide circle2, circle3, and notes container
-  if (circle2 && circle3 && notesContainer) {
+  if (circle2 && circle3 && notesContainer && circleSave) {
     circle2.style.display = 'none';
     circle3.style.display = 'none';
     notesContainer.style.display = 'none';
+    circleSave.style.display = 'none';
   }
 });
