@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>NOTELAND</title>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/MainPage.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
 
-    <a href="http://127.0.0.1:5000/home">
+    <a href="http://127.0.0.1:5000/">
         <h1>NOTELAND</h1>
     </a>
 
@@ -29,13 +31,18 @@
     <div class="notes-container" id="notes-container">
         <div class="notes-form" id="notes-form">
             <input type="text" id="note-title" placeholder="Title..."><br><br>
-            <textarea id="note-content" placeholder="Your note here..." style="height:263px; width: 963px;"></textarea><br>
+            <textarea id="note-content" placeholder="Your note here..."></textarea><br>
         </div><br>
         <div class="circle-save" id="circle-save">
         <h2>Save your notes</h2>
     </div>
     </div>
 
+    <!--Arrows-->
+     <div class="arrows_container">
+        <b class="fas fa-chevron-left"></b>
+        <b class="fas fa-chevron-right"></b>
+    </div>
 
 
 <script src="{{ url_for('static', filename='js/buttons.js') }}"></script>

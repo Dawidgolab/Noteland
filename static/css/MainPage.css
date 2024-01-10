@@ -1,31 +1,31 @@
+/* Background styling */
 body {
-  background: linear-gradient(to right, violet, grey, violet, grey,violet);
+  background: linear-gradient(to right, violet, grey, violet, grey, violet);
   margin: 0;
   padding: 0;
 }
 
-/*Url*/
+/* Link styles */
 a {
   text-decoration: none; /* Remove underline */
-  /* Optionally, you can add more styles if needed */
   color: inherit; /* Preserve the default link color */
 }
 
-
+/* Header (h1) styling */
 h1 {
-  background: linear-gradient(to right, violet,grey, violet, grey,violet);
-  font-size: 8vw; /* Resize text based on screen width */
+  background: linear-gradient(to right, violet, grey, violet, grey, violet);
+  font-size: 8vw; /* Responsive text size based on screen width */
   text-align: center;
   font-family: 'Pacifico', cursive;
   margin: 5vh 0; /* Top and bottom margins for the h1 element */
-  animation: fadeInText 1s ease-in-out forwards; /* Adding text appearance animation */
+  animation: fadeInText 1s ease-in-out forwards; /* Text appearance animation */
 }
 
-/* Reguła dla urządzeń o szerokości ekranu mniejszej niż 768px */
+/* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
   h1 {
-    font-size: 8vw; /* Dostosowanie rozmiaru tekstu dla mniejszych ekranów */
-    margin: 5vh 0; /* Dostosowanie marginesu górnego i dolnego dla mniejszych ekranów */
+    font-size: 8vw; /* Adjust text size for smaller screens */
+    margin: 5vh 0; /* Adjust top and bottom margins for smaller screens */
   }
 }
 
@@ -38,31 +38,34 @@ h1 {
   }
 }
 
+/* Styling for the main circle */
 .circle {
-  width: 400px;
-  height: 400px;
-  background-color: #330033;
-  border-radius: 50%;
+  width: 400px; /* Width of the circle */
+  height: 400px; /* Height of the circle */
+  background-color: #330033; /* Background color of the circle */
+  border-radius: 50%; /* Creating a circular shape */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute; /* Ustawienie pozycji absolutnej */
-  top: 60%; /* Przesunięcie do 50% od góry */
-  left: 50%; /* Przesunięcie do 50% od lewej */
-  transform: translate(-50%, -50%); /* Wycentrowanie elementu */
-  overflow: hidden;
-  opacity: 0; /* Ustawienie początkowej przezroczystości na 0 */
-  animation: fadeIn 1s ease-in-out forwards; /* Dodanie animacji pojawiania się koła */
-  cursor: pointer;
+  justify-content: center; /* Centering horizontally */
+  align-items: center; /* Centering vertically */
+  position: absolute; /* Positioning */
+  top: 60%; /* Position from the top */
+  left: 50%; /* Position from the left */
+  transform: translate(-50%, -50%); /* Centering the circle */
+  overflow: hidden; /* Hiding overflow content */
+  opacity: 0; /* Initial transparency */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+  cursor: pointer; /* Cursor style on hover */
 }
 
+/* Styling for text inside the main circle */
 .circle h2 {
-  color: white;
-  margin: 0;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards; /* Dodanie animacji pojawiania się tekstu */
+  color: white; /* Text color */
+  margin: 0; /* Margin for the text */
+  opacity: 0; /* Initial transparency */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
 }
 
+/* Keyframes for fade-in animation */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -71,83 +74,152 @@ h1 {
     opacity: 1;
   }
 }
+/* Styling for circles 2 and 3 */
 .circle2,
 .circle3 {
-  width: 300px; /* Adjust the width and height as needed */
-  height: 300px;
-  background-color: #330033;
-  border-radius: 50%;
+  /* Circle styling */
+  width: 300px; /* Width of the circle */
+  height: 300px; /* Height of the circle */
+  background-color: #330033; /* Background color */
+  border-radius: 50%; /* Creating a circular shape */
+  display: flex;
+  justify-content: center; /* Centering horizontally */
+  align-items: center; /* Centering vertically */
+  position: absolute; /* Positioning */
+  top: 50%; /* Position from the top */
+  left: 50%; /* Position from the left */
+  transform: translateX(-50%); /* Centering the circle */
+  overflow: hidden; /* Hiding overflow content */
+  opacity: 0; /* Initial transparency */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+  cursor: pointer; /* Cursor style on hover */
+}
+
+/* Styling for text inside circles 2 and 3 */
+.circle2 h2,
+.circle3 h2 {
+  /* Text styling */
+  color: white; /* Text color */
+  margin: 0; /* Margin for the text */
+  opacity: 1; /* Initial opacity */
+  text-align: center; /* Centering text horizontally */
+  line-height: 300px; /* Centering text vertically */
+}
+
+
+
+/* Styling for the notes container */
+.notes-container {
+  /* Notes container styling */
+  position: absolute; /* Positioning */
+  height: 350px; /* Height of the container */
+  width: 38.5%; /* Width of the container */
+  top: 50%; /* Position from the top */
+  left: 50%; /* Position from the left */
+  transform: translate(-50%, -50%); /* Centering the container */
+  display: none; /* Initially hidden */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%; /* Adjust the left position for circle3 */
-  transform: translateX(-50%);
-  overflow: hidden;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  cursor: pointer;
 }
 
-.circle2 h2,
-.circle3 h2 {
-  color: white;
-  margin: 0;
-  opacity: 1;
-  text-align: center; /* Center the text horizontally */
-  line-height: 300px; /* Center the text vertically (assuming circle height is 300px) */
-}
-
-.notes-container {
-    position: absolute;
-    height: 300px; /* Możesz zmienić wysokość na żądaną wartość */
-    width: 80%; /* Możesz zmienić szerokość na żądaną wartość */
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    animation: fadeIn 1s ease-in-out forwards;
-}
-
+/* Styling for the notes form */
 .notes-form {
-    background-color: #330033;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 100%; /* Wysokość formularza jest równa wysokości .notes-container */
-    width: 100%; /* Szerokość formularza jest równa szerokości .notes-container */
-}
-.notes-form textarea,
-.notes-form input{
-    background: linear-gradient(to right, indigo, grey);
-    color: white;
+  /* Notes form styling */
+  background-color: #330033; /* Background color */
+  padding: 20px; /* Padding */
+  border-radius: 10px; /* Border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+  height: 100%; /* Height of the form */
+  width: 100%; /* Width of the form */
 }
 
+/* Styling for form inputs in the notes form */
+.notes-form textarea {
+    /* Form inputs styling */
+    background: linear-gradient(to right, indigo, grey); /* Background gradient */
+    color: white; /* Text color */
+    width: 100%; /* Szerokość inputu - pełna szerokość notes-form */
+    height: 80%;
+    max-width: 100%; /* Maksymalna szerokość inputu - przykładowo */
+    box-sizing: border-box; /* Sizing model */
+    resize: none; /* Prevent textarea resizing */
+    overflow: auto; /* Enable scrollbars if content exceeds textarea */
+    padding: 10px; /* Padding for textarea */
+    border-radius: 5px; /* Border radius for textarea */
+    border: none; /* Remove default textarea border */
+    margin-bottom: 10px; /* Bottom margin for inputs */
+    margin-top: 10px; /* Top margin for inputs */
+}
+
+/* Styling for form inputs in the notes form */
+.notes-form input {
+  /* Form inputs styling */
+  background: linear-gradient(to right, indigo, grey); /* Background gradient */
+  color: white; /* Text color */
+}
+
+/* Placeholder color for form inputs in the notes form */
 .notes-form textarea::placeholder,
-.notes-form input::placeholder{
-    color: #9595b7; /* Nowy kolor placeholdera */
+.notes-form input::placeholder {
+  color: #9595b7; /* Placeholder text color */
 }
 
-/*CIRCLE BUTTOM*/
+
+
+
+/* Styling for the circle-save button */
 .circle-save {
-  width: 200px;
-  height: 200px;
-  background-color: #330033;
-  border-radius: 50%;
-  position: absolute; /* Ustawienie pozycji absolutnej */
-  bottom: -150%; /* Przesunięcie do % od góry */
-  left: 50%; /* Przesunięcie do 50% od lewej */
-  transform: translate(-50%, -50%); /* Wycentrowanie elementu */
-  animation: fadeIn 1s ease-in-out forwards; /* Dodanie animacji pojawiania się koła */
-  cursor: pointer;
-
-}
-.circle-save h2{
-  color:white;
-  text-align: center;
-  margin: 0;
-  line-height: 200px; /* Dopasowanie do wysokości dla wyśrodkowania tekstu */
+  /* Circle save button styling */
+  width: 200px; /* Width of the button */
+  height: 200px; /* Height of the button */
+  background-color: #330033; /* Background color */
+  border-radius: 50%; /* Creating a circular shape */
+  position: absolute; /* Positioning */
+  bottom: -80%; /* Position from the bottom */
+  left: 50%; /* Position from the left */
+  transform: translateX(-50%); /* Centering the button */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+  cursor: pointer; /* Cursor style on hover */
 }
 
+/* Styling for text inside the circle-save button */
+.circle-save h2 {
+  /* Text styling */
+  color: white; /* Text color */
+  text-align: center; /* Centering text horizontally */
+  margin: 0; /* Margin for the text */
+  line-height: 200px; /* Centering text vertically */
+}
 
+/* Styling for the arrows container */
+/* Styling for the arrows container */
+.arrows_container {
+  /* Arrows container styling */
+  position: fixed; /* Positioning */
+  bottom: 20px; /* Position from the bottom */
+  right: 20px; /* Position from the right */
+  display: flex; /* Flex display */
+  align-items: center; /* Centering vertically */
+  padding: 0 20px; /* Padding */
+  box-sizing: border-box; /* Border box sizing */
+}
+
+/* Styling for left and right arrows */
+.fas.fa-chevron-left,
+.fas.fa-chevron-right {
+  /* Left and right arrows styling */
+  height: 70px; /* Height of the arrows */
+  width: 70px; /* Width of the arrows */
+  background-color: gray; /* Background color */
+  border-radius: 50%; /* Creating a circular shape */
+  display: flex; /* Flex display */
+  align-items: center; /* Centering vertically */
+  justify-content: center; /* Centering horizontally */
+  color: white; /* Text color */
+  cursor: pointer; /* Cursor style on hover */
+  z-index: 999; /* z-index for stacking */
+  position: relative; /* Positioning */
+  margin-right: 20px; /* Margin to separate the arrows from circle-save */
+}
