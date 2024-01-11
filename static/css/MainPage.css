@@ -115,7 +115,7 @@ h1 {
   height: 350px; /* Height of the container */
   width: 38.5%; /* Width of the container */
   top: 50%; /* Position from the top */
-  left: 50%; /* Position from the left */
+  left: 48%; /* Position from the left */
   transform: translate(-50%, -50%); /* Centering the container */
   display: none; /* Initially hidden */
   animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
@@ -172,16 +172,24 @@ h1 {
 /* Styling for the circle-save button */
 .circle-save {
   /* Circle save button styling */
-  width: 200px; /* Width of the button */
-  height: 200px; /* Height of the button */
+  width: 10vw; /* Width of the button in viewport width units */
+  height: 10vw; /* Height of the button in viewport height units */
+  min-width: 100px; /* Minimum width */
+  min-height: 100px; /* Minimum height */
+  max-width: 200px; /* Maximum width */
+  max-height: 200px; /* Maximum height */
   background-color: #330033; /* Background color */
   border-radius: 50%; /* Creating a circular shape */
   position: absolute; /* Positioning */
-  bottom: -80%; /* Position from the bottom */
-  left: 50%; /* Position from the left */
+  bottom: -70%; /* Position from the bottom */
+  left: 57%; /* Position from the left */
   transform: translateX(-50%); /* Centering the button */
   animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
   cursor: pointer; /* Cursor style on hover */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 /* Styling for text inside the circle-save button */
@@ -190,8 +198,13 @@ h1 {
   color: white; /* Text color */
   text-align: center; /* Centering text horizontally */
   margin: 0; /* Margin for the text */
-  line-height: 200px; /* Centering text vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
+
+
 
 /* Styling for the arrows container */
 /* Styling for the arrows container */
