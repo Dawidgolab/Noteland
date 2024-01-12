@@ -6,12 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
   var circleSave = document.querySelector('.circle-save');
   var backButton = document.querySelector('.fas.fa-chevron-left');
 
+
   circle.addEventListener('click', function() {
     circle.style.display = 'none';
     circle2.style.display = 'block';
     circle3.style.display = 'block';
-    circle2.style.left = '30%';
-    circle3.style.left = '70%';
+    circle2.style.left = '30vw';
+    circle3.style.left = '71vw';
     localStorage.setItem('currentPage', 'circle2');
   });
 
@@ -24,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('currentPage', 'notesContainer');
   });
 
-  backButton.addEventListener('click', function() {
+
+    backButton.addEventListener('click', function() {
     var currentPage = localStorage.getItem('currentPage');
     if (currentPage === 'circle2' || currentPage === 'circle3') {
       circle.style.display = 'flex';

@@ -40,8 +40,8 @@ h1 {
 
 /* Styling for the main circle */
 .circle {
-  width: 400px; /* Width of the circle */
-  height: 400px; /* Height of the circle */
+  width: 50vw; /* Width of the circle */
+  height: 50vw; /* Height of the circle */
   background-color: #330033; /* Background color of the circle */
   border-radius: 50%; /* Creating a circular shape */
   display: flex;
@@ -78,8 +78,8 @@ h1 {
 .circle2,
 .circle3 {
   /* Circle styling */
-  width: 300px; /* Width of the circle */
-  height: 300px; /* Height of the circle */
+  width: 20vw; /* Width of the circle */
+  height: 20vw; /* Height of the circle */
   background-color: #330033; /* Background color */
   border-radius: 50%; /* Creating a circular shape */
   display: flex;
@@ -102,8 +102,12 @@ h1 {
   color: white; /* Text color */
   margin: 0; /* Margin for the text */
   opacity: 1; /* Initial opacity */
+  position: absolute;
+  top: 40%;
+  left:2%;
+
   text-align: center; /* Centering text horizontally */
-  line-height: 300px; /* Centering text vertically */
+  font-size: 3vw;
 }
 
 
@@ -181,8 +185,8 @@ h1 {
   background-color: #330033; /* Background color */
   border-radius: 50%; /* Creating a circular shape */
   position: absolute; /* Positioning */
-  bottom: -70%; /* Position from the bottom */
-  left: 57%; /* Position from the left */
+  bottom: -90%; /* Position from the bottom */
+  left: 53%; /* Position from the left */
   transform: translateX(-50%); /* Centering the button */
   animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
   cursor: pointer; /* Cursor style on hover */
@@ -220,8 +224,7 @@ h1 {
 }
 
 /* Styling for left and right arrows */
-.fas.fa-chevron-left,
-.fas.fa-chevron-right {
+.fas.fa-chevron-left{
   /* Left and right arrows styling */
   height: 70px; /* Height of the arrows */
   width: 70px; /* Width of the arrows */
