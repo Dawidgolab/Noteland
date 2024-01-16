@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NOTELAND</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/MainPage.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
 <body>
 
 <a href="http://127.0.0.1:5000/">
@@ -32,11 +39,14 @@
 </div>
 
 <!-- Titles list -->
-<div class="Titles_list">
-    <h2>Title Lists</h2>
-    <ul id="titles-list">
-        <!-- Title items will be dynamically added here -->
-    </ul>
+
+<div class="container_title">
+    <div class="Titles_list">
+        <h2>Titles List</h2>
+        <ul id="titles-list">
+            <!-- Title items will be dynamically added here -->
+        </ul>
+    </div>
 </div>
 
 <!--Arrows-->
@@ -47,16 +57,9 @@
 
 
 
-<script src="{{ url_for('static', filename='js/buttons.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
-<head>
-    <meta charset="UTF-8">
-    <title>NOTELAND</title>
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/MainPage.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-</head>
 </html>
 
 

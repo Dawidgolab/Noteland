@@ -240,7 +240,26 @@ h1 {
   margin-right: 20px; /* Margin to separate the arrows from circle-save */
 }
 
-.Titles_list{
-text-align:center;
-font-size: 2vw;
+.container_title {
+    background: purple;
+    position: absolute; /* Positioning */
+    height: 15vw;; /* Height of the container */
+    width: 38.5%; /* Width of the container */
+    top: 50%; /* Position from the top */
+    left: 50%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Centering the container */
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.Titles_list{
+    text-align:center;
+    font-size: 2vw;
+    width:100%;
+    background: linear-gradient(to right, violet, grey, violet, grey, violet);
+    position:absolute;
+    border: solid black 5px;
+}
+

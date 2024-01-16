@@ -6,9 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var circleSave = document.querySelector('.circle-save');
   var backButton = document.querySelector('.fas.fa-chevron-left');
   var List = document.querySelector('.Titles_list');
+  var ListField = document.querySelector('.container_title');
+  var noteTitleInput = document.getElementById('note-title');
+  var noteContentInput = document.getElementById('note-content');
+  var titlesList = document.getElementById('titles-list');
 
   circle.addEventListener('click', function() {
     List.style.display = 'none';
+    ListField.style.display = 'none';
     circle.style.display = 'none';
     circle2.style.display = 'block';
     circle3.style.display = 'block';
@@ -22,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     circle2.style.display = 'none';
     circle3.style.display = 'none';
     notesContainer.style.display = 'block';
+    ListField.style.display = 'none';
     circleSave.style.display = 'block';
     localStorage.setItem('currentPage', 'notesContainer');
   });
@@ -33,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     notesContainer.style.display = 'none';
     circleSave.style.display = 'none';
     List.style.display = 'block';
+    ListField.style.display = 'block';
     localStorage.setItem('currentPage', 'notesContainer');
   });
 
@@ -46,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
       notesContainer.style.display = 'none';
       circleSave.style.display = 'none';
       List.style.display = 'none';
+      ListField.style.display = 'none';
       localStorage.setItem('currentPage', 'circle');
     } else if (currentPage === 'notesContainer') {
       circle.style.display = 'none';
@@ -55,8 +63,46 @@ document.addEventListener('DOMContentLoaded', function() {
       circleSave.style.display = 'none';
       localStorage.setItem('currentPage', 'circle2');
       List.style.display = 'none';
+      ListField.style.display = 'none';
     }
   });
+
+var savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
+    renderTitlesList(savedNotes);
+
+    circleSave.addEventListener('click', function () {
+        var title = noteTitleInput.value.trim();
+        var content = noteContentInput.value.trim();
+        if (title !== '') {
+            // Dodaj nową notatkę do listy
+            var newNote = { title: title, content: content };
+            savedNotes.push(newNote);
+
+            // Zapisz notatki w localStorage
+            localStorage.setItem('notes', JSON.stringify(savedNotes));
+
+            // Wyrenderuj listę tytułów
+            renderTitlesList(savedNotes);
+
+            // Czyszczenie pól po dodaniu notatki
+            noteTitleInput.value = '';
+            noteContentInput.value = '';
+        }
+    });
+
+
+
+    function renderTitlesList(notes) {
+        // Wyczyść listę przed ponownym renderowaniem
+        titlesList.innerHTML = '';
+
+        // Renderuj każdą notatkę jako element listy
+        notes.forEach(function (note) {
+            var newTitleItem = document.createElement('li');
+            newTitleItem.textContent = note.title;
+            titlesList.appendChild(newTitleItem);
+        });
+    }
 
   hideElements();
 
@@ -66,5 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
     circle3.style.display = 'none';
     notesContainer.style.display = 'none';
     circleSave.style.display = 'none';
+    ListField.style.display = 'none';
   }
 });
