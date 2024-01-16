@@ -5,9 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var notesContainer = document.querySelector('.notes-container');
   var circleSave = document.querySelector('.circle-save');
   var backButton = document.querySelector('.fas.fa-chevron-left');
-
+  var List = document.querySelector('.Titles_list');
 
   circle.addEventListener('click', function() {
+    List.style.display = 'none';
     circle.style.display = 'none';
     circle2.style.display = 'block';
     circle3.style.display = 'block';
@@ -25,6 +26,16 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('currentPage', 'notesContainer');
   });
 
+  circle2.addEventListener('click', function() {
+    circle.style.display = 'none';
+    circle2.style.display = 'none';
+    circle3.style.display = 'none';
+    notesContainer.style.display = 'none';
+    circleSave.style.display = 'none';
+    List.style.display = 'block';
+    localStorage.setItem('currentPage', 'notesContainer');
+  });
+
 
     backButton.addEventListener('click', function() {
     var currentPage = localStorage.getItem('currentPage');
@@ -34,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
       circle3.style.display = 'none';
       notesContainer.style.display = 'none';
       circleSave.style.display = 'none';
+      List.style.display = 'none';
       localStorage.setItem('currentPage', 'circle');
     } else if (currentPage === 'notesContainer') {
       circle.style.display = 'none';
@@ -42,12 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
       notesContainer.style.display = 'none';
       circleSave.style.display = 'none';
       localStorage.setItem('currentPage', 'circle2');
+      List.style.display = 'none';
     }
   });
 
   hideElements();
 
   function hideElements() {
+    List.style.display = 'none';
     circle2.style.display = 'none';
     circle3.style.display = 'none';
     notesContainer.style.display = 'none';

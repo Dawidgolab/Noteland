@@ -40,8 +40,8 @@ h1 {
 
 /* Styling for the main circle */
 .circle {
-  width: 50vw; /* Width of the circle */
-  height: 50vw; /* Height of the circle */
+  width: 30vw; /* Width of the circle */
+  height: 30vw; /* Height of the circle */
   background-color: #330033; /* Background color of the circle */
   border-radius: 50%; /* Creating a circular shape */
   display: flex;
@@ -238,4 +238,9 @@ h1 {
   z-index: 999; /* z-index for stacking */
   position: relative; /* Positioning */
   margin-right: 20px; /* Margin to separate the arrows from circle-save */
+}
+
+.Titles_list{
+text-align:center;
+font-size: 2vw;
 }
