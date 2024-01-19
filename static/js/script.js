@@ -11,6 +11,28 @@ document.addEventListener('DOMContentLoaded', function() {
   var noteContentInput = document.getElementById('note-content');
   var titlesList = document.getElementById('titles-list');
 
+titlesList.addEventListener('click', function(event) {
+        if (event.target.tagName === 'LI') {
+            var selectedIndex = Array.from(titlesList.children).indexOf(event.target);
+            var selectedNote = savedNotes[selectedIndex];
+
+            // Populate the existing form fields with the selected note's title and content
+            noteTitleInput.value = selectedNote.title;
+            noteContentInput.value = selectedNote.content;
+
+            // Display the existing form container
+            notesContainer.style.display = 'block';
+
+            // Hide other elements if needed
+            circle.style.display = 'none';
+            circle2.style.display = 'none';
+            circle3.style.display = 'none';
+            circleSave.style.display = 'none';
+            List.style.display = 'none';
+            ListField.style.display = 'none';
+        }
+    });
+
   circle.addEventListener('click', function() {
     List.style.display = 'none';
     ListField.style.display = 'none';

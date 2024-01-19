@@ -258,8 +258,18 @@ h1 {
     text-align:center;
     font-size: 2vw;
     width:100%;
-    background: linear-gradient(to right, violet, grey, violet, grey, violet);
+    background: linear-gradient(to right, grey,violet ,grey,violet, grey);
     position:absolute;
     border: solid black 5px;
 }
 
+.Titles_list li {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Pacifico', cursive;
+    width:95%;
+}
